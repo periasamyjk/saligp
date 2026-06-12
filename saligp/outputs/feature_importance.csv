@@ -1,0 +1,9 @@
+feature,importance
+embedding_similarity,0.27288027854965646
+overall_similarity,0.2254577043173787
+tfidf_similarity,0.16020838383177533
+size_similarity,0.13977580529590225
+filename_similarity,0.11096107842899963
+content_similarity,0.0794212684020236
+metadata_similarity,0.011295481174264009
+sha256_match,0.0

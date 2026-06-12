@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SALIGP Duplicate Examples</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #333; padding: 20px; }
+  h1 { color: #1a237e; }
+  h2 { color: #283593; margin-top: 40px; }
+  .example { background: white; border-radius: 8px; padding: 20px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .pair { display: flex; gap: 20px; }
+  .doc { flex: 1; background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; padding: 12px; }
+  .doc h4 { margin: 0 0 8px 0; color: #1a237e; }
+  .doc pre { white-space: pre-wrap; word-break: break-word; font-size: 0.85em; margin: 0; max-height: 200px; overflow: auto; }
+  .metrics { margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .metric { background: #e8eaf6; border-radius: 4px; padding: 4px 10px; font-size: 0.85em; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.9em; font-weight: 600; }
+  .badge-Easy { background: #e8f5e9; color: #2e7d32; }
+  .badge-Medium { background: #fff3e0; color: #e65100; }
+  .badge-Hard { background: #fce4ec; color: #c62828; }
+  .badge-Non-Duplicate { background: #e3f2fd; color: #1565c0; }
+</style>
+</head>
+<body>
+<h1>🔍 SALIGP - Duplicate Examples</h1>
+
+
+<h2>Easy Duplicates</h2>
+
+<div class="example">
+  <strong>Pair ID:</strong> 1079 |
+  <span class="badge badge-Easy">Easy</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: ag_news_science_0023.txt</h4>
+      <pre># Research Team Publishes Landmark Study on Climate Adaptation
+
+Critics have raised questions about the long-term sustainability of the proposed approach. Proponents, however, argue that the benefits outweigh the potential risks.
+
+According to sources familiar with the matter, discussions have been ongoing for several months. The final decision reflects a careful balancing of competing interests and priorities.
+
+The announcement comes amid growing interest from stakeholders across multiple secto...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: ag_news_science_0023_v2.txt</h4>
+      <pre>INTERNAL DOCUMENT
+
+# Research Team Publishes Landmark Study on Climate Adaptation Critics have raised qustions about the long-term sustainability of the proposed approach. Proponents, however, argue that the benefits outweigh the potential risks. According to sources familiar with the matter, discussions haev been ongoing for several months. The final decision reflects a carefful balancing of competing interests and priorities. The announcement comes amid growing interest from stakeholders acros...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9775</span>
+    <span class="metric">Content: 0.9839</span>
+    <span class="metric">TF-IDF: 0.9623</span>
+    <span class="metric">Embedding: 0.9923</span>
+    <span class="metric">Filename: 0.9412</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 1325 |
+  <span class="badge badge-Easy">Easy</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: enron_email_0088.txt</h4>
+      <pre>From: Emma Brown <emma.brown@company.com>
+To: Grace Lee <grace.lee@company.com>, David Wilson <david.wilson@company.com>
+Subject: Reminder: Team Standup Tomorrow
+Date: Sun, 26 Nov 2023 10:07:00 +0000
+Message-ID: <00002088.84572@company.com>
+Department: Finance
+
+I hope this message finds you well. I wanted to follow up on our recent discussions.
+The team has made significant progress on the deliverables outlined in our last meeting.
+Please see the attached documents for your review and approval.
+...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: enron_email_0088_v3.txt</h4>
+      <pre>INTERNAL DOCUMENT
+
+From: Emma Brown <emma.brown@company.com>
+To: Grace Lee <grace.lee@company.com>, David Wilson <david.wilson@company.com>
+Subject: Reminder: Team Standup Tomorrow
+Date: Sun, 26 Nov 2023 10:07:00 +0000
+Message-ID: <00002088.84572@company.com>
+Department: Finance
+
+I hope this message finds you well. I wanted to follow up on our recent discussions.
+The team has made significant progress on the deliverables outlined in our last meeting.
+Please see the attached documents for your re...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9769</span>
+    <span class="metric">Content: 1.0</span>
+    <span class="metric">TF-IDF: 0.9648</span>
+    <span class="metric">Embedding: 0.9835</span>
+    <span class="metric">Filename: 0.9302</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 1314 |
+  <span class="badge badge-Easy">Easy</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: bbc_sports_0042.txt</h4>
+      <pre># Veteran Player Announces Retirement After Decorated Career
+
+Further developments are expected in the coming weeks as additional details emerge. Observers will be watching closely to assess the broader impact of these events.
+
+According to sources familiar with the matter, discussions have been ongoing for several months. The final decision reflects a careful balancing of competing interests and priorities.
+
+Critics have raised questions about the long-term sustainability of the proposed approa...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: bbc_sports_0042_copy.txt</h4>
+      <pre>CONFIDENTIAL
+
+# Veteran Player Announces Retirement After Decorated Career
+
+Further developments are expected in the coming weeks as additional details emerge. Observers will be watching closely to assess the broader impact of these events.
+
+Contact the document owner for any clarifications.
+
+
+According to sources familiar with the matter, discussions have been ongoing for several months. The final decision reflects a careful balancing of competing interests and priorities.
+
+Critics have raised ...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9794</span>
+    <span class="metric">Content: 1.0</span>
+    <span class="metric">TF-IDF: 0.9664</span>
+    <span class="metric">Embedding: 0.9971</span>
+    <span class="metric">Filename: 0.8837</span>
+  </div>
+</div>
+
+
+<h2>Medium Duplicates</h2>
+
+<div class="example">
+  <strong>Pair ID:</strong> 1323 |
+  <span class="badge badge-Medium">Medium</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: techreport_0016.txt</h4>
+      <pre># Technical Analysis: Graph Database Querying
+
+Document ID: DOC-03016
+Date: 2026-06-12
+
+## Abstract
+Recent developments in graph database querying have transformed how businesses operate at scale. Organizations increasingly rely on graph database querying to maintain competitive advantage. This document provides a comprehensive overview of graph database querying in modern enterprise environments.
+
+## Introduction
+
+Early implementations faced significant challenges related to performance and rel...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: techreport_0016_final_v2_0483.txt</h4>
+      <pre># Technical Analysis: Graph Database Querying Document ID: DOC-03016 Date: 2026-06-12 ## Abstract Recent developments in graph database querying have transformed how businesses operate at scale. Organizations increasingly rely on graph database querying to maintain competitive advantage. This document provides a comprehensive overview of graph database querying in modern enterprise environments. ## Introduction Early implementations faced significant challenges related to performance and reliabi...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9381</span>
+    <span class="metric">Content: 0.9974</span>
+    <span class="metric">TF-IDF: 0.9972</span>
+    <span class="metric">Embedding: 0.9999</span>
+    <span class="metric">Filename: 0.7308</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 2666 |
+  <span class="badge badge-Medium">Medium</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: enron_email_0031.txt</h4>
+      <pre>From: Grace Lee <grace.lee@company.com>
+To: David Wilson <david.wilson@company.com>
+Subject: Meeting Notes - Infrastructure Planning
+Date: Wed, 09 Aug 2023 13:53:00 +0000
+Message-ID: <00002031.99463@company.com>
+Department: Operations
+
+The deadline for the current milestone is approaching, and we are on track to deliver.
+We should coordinate with the other teams to ensure alignment on our shared objectives.
+The team has made significant progress on the deliverables outlined in our last meeting.
+...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: enron_email_0031_edited_0468.txt</h4>
+      <pre>From: Grace Lee <grace.lee@company.com> To: David Wilson <david.wilson@company.com> Subject: Meeting Notes - Infrastructure Planning Date: Wed, 09 Aug 2023 13:53:00 +0000 Message-ID: <00002031.99463@company.com> Department: Operations The deadline for the current milestone is approaching, and we are on track to deliver. We should coordinate with the other teams to ensure alignment on our shared objectives. The team has made significant progress on the deliverables outlined in our last meeting. C...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9154</span>
+    <span class="metric">Content: 0.994</span>
+    <span class="metric">TF-IDF: 0.9899</span>
+    <span class="metric">Embedding: 0.9988</span>
+    <span class="metric">Filename: 0.7692</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 4264 |
+  <span class="badge badge-Medium">Medium</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: bbc_sports_0057.txt</h4>
+      <pre># Team Completes Historic Comeback Victory in Tournament
+
+According to sources familiar with the matter, discussions have been ongoing for several months. The final decision reflects a careful balancing of competing interests and priorities.
+
+Further developments are expected in the coming weeks as additional details emerge. Observers will be watching closely to assess the broader impact of these events.
+
+Critics have raised questions about the long-term sustainability of the proposed approach. ...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: bbc_sports_0057_copy.txt</h4>
+      <pre>REVISED EDITION
+
+# Team Completes Historic Comeback Victory in Tournament
+
+According to sources familiar with the matter, discussions have been ongoing for several months. The final decision reflects a careful balancing of competing interests and priorities.
+
+Further developments are expected in the coming weeks as additional details emerge. Observers will be watching closely to assess the broader impact of these events.
+
+Critics have raised questions about the long-term sustainability of the pr...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9249</span>
+    <span class="metric">Content: 1.0</span>
+    <span class="metric">TF-IDF: 0.9473</span>
+    <span class="metric">Embedding: 0.9465</span>
+    <span class="metric">Filename: 0.8837</span>
+  </div>
+</div>
+
+
+<h2>Hard Duplicates</h2>
+
+<div class="example">
+  <strong>Pair ID:</strong> 5544 |
+  <span class="badge badge-Hard">Hard</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: bbc_sports_0007.txt</h4>
+      <pre># Veteran Player Announces Retirement After Decorated Career
+
+The announcement comes amid growing interest from stakeholders across multiple sectors. Experts suggest that the implications could be far-reaching, with potential effects on both domestic and international markets.
+
+Critics have raised questions about the long-term sustainability of the proposed approach. Proponents, however, argue that the benefits outweigh the potential risks.
+
+SYDNEY (June 28, 2023) — Veteran Player Announces Reti...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: bbc_sports_0007_updated_0503.txt</h4>
+      <pre>DRAFT - FOR INTERNAL USE ONLY
+
+# Veteran Player Announces Retirement After Decorated Career The announcement comes amid growing interest from stakeholders across multiple sectors. Critics have raised questions about the long-term sustainability of the proposed approach. Experts suggest that the implications could be far-reaching, with potential effects on both domestic and international markets. Proponents, however, argue that the benefits outweigh the potential risks. SYDNEY (June 28, 2023) — V...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.8637</span>
+    <span class="metric">Content: 1.0</span>
+    <span class="metric">TF-IDF: 0.8775</span>
+    <span class="metric">Embedding: 0.8825</span>
+    <span class="metric">Filename: 0.7451</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 3089 |
+  <span class="badge badge-Hard">Hard</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: enron_email_0009.txt</h4>
+      <pre>From: Alice Johnson <alice.johnson@company.com>
+To: Henry Chen <henry.chen@company.com>
+Subject: FW: Data Migration Schedule
+Date: Sat, 07 Jan 2023 17:09:00 +0000
+Message-ID: <00002009.98740@company.com>
+Department: Management
+
+Please see the attached documents for your review and approval.
+Could you please confirm receipt of this message and provide your feedback at your earliest convenience?
+The team has made significant progress on the deliverables outlined in our last meeting.
+We should coor...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: enron_email_0009_revised_0828.txt</h4>
+      <pre>CONFIDENTIAL
+
+From: Alice Johnson <alice.johnson@company.com> To: Henry Chenn <henry.chen@company.com> Subject: FW: Data Migration Schedule Date: Sat, 07 Ja 2023 17:09:00 +0000 Message-ID: <00002009.98740@company.com> Department: Management Please see the attached documents for your review and approval. Could you please confirm receipt of this message and supply your feedbcak at your earliest conevnience? The team has made significant progress on the deliverables outlined in our last meeting. We...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.9009</span>
+    <span class="metric">Content: 0.971</span>
+    <span class="metric">TF-IDF: 0.909</span>
+    <span class="metric">Embedding: 0.9865</span>
+    <span class="metric">Filename: 0.7547</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 1752 |
+  <span class="badge badge-Hard">Hard</span>
+  <strong> Label:</strong> 1
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: ag_news_science_0029.txt</h4>
+      <pre># New Species Discovered in Deep Ocean Exploration Mission
+
+BERLIN (November 21, 2023) — New Species Discovered in Deep Ocean Exploration Mission. Officials and industry analysts are closely monitoring developments as the situation continues to evolve.
+
+The announcement comes amid growing interest from stakeholders across multiple sectors. Experts suggest that the implications could be far-reaching, with potential effects on both domestic and international markets.
+
+According to sources familiar...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: ag_news_science_0029_modified_0018.txt</h4>
+      <pre># New Species Discovered in Deep Ocean Exploration Mission BERLIN (November 21, 2023) — Emerging Species Discovered in Deep Ocean Exploration Mission. Officials and industry analysts are closely monitoring developments as the sittuation continues to evolve. The announcement comes amid growing interest from stakeholders across multiple sectors. Experts suggest that the implicatioons could be far-reaching, with potential effects on bot domestic and inetrnational markets. Accoridng to sources famil...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.86</span>
+    <span class="metric">Content: 0.951</span>
+    <span class="metric">TF-IDF: 0.8882</span>
+    <span class="metric">Embedding: 0.9219</span>
+    <span class="metric">Filename: 0.7742</span>
+  </div>
+</div>
+
+
+<h2>Non-Duplicates</h2>
+
+<div class="example">
+  <strong>Pair ID:</strong> 3653 |
+  <span class="badge badge-Non-Duplicate">Non-Duplicate</span>
+  <strong> Label:</strong> 0
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: enron_email_0037.txt</h4>
+      <pre>From: Grace Lee <grace.lee@company.com>
+To: Bob Smith <bob.smith@company.com>
+Subject: Reminder: Team Standup Tomorrow
+Date: Mon, 20 Nov 2023 09:33:00 +0000
+Message-ID: <00002037.84498@company.com>
+Department: Finance
+
+The deadline for the current milestone is approaching, and we are on track to deliver.
+The quarterly review is scheduled for next week, and I will need your input by Friday.
+The team has made significant progress on the deliverables outlined in our last meeting.
+
+Thanks,
+Grace Lee...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: enron_email_0071.txt</h4>
+      <pre>From: David Wilson <david.wilson@company.com>
+To: Henry Chen <henry.chen@company.com>
+Subject: Follow up: Budget Approval Request
+Date: Sun, 02 Apr 2023 15:03:00 +0000
+Message-ID: <00002071.93284@company.com>
+Department: Engineering
+
+We need to schedule a follow-up meeting to discuss the next steps in our project timeline.
+Could you please confirm receipt of this message and provide your feedback at your earliest convenience?
+The deadline for the current milestone is approaching, and we are on t...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.5732</span>
+    <span class="metric">Content: 0.6992</span>
+    <span class="metric">TF-IDF: 0.3938</span>
+    <span class="metric">Embedding: 0.4154</span>
+    <span class="metric">Filename: 0.95</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 2429 |
+  <span class="badge badge-Non-Duplicate">Non-Duplicate</span>
+  <strong> Label:</strong> 0
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: gutenberg_1232_the_prince.txt</h4>
+      <pre>The Prince
+
+by Nicolo Machiavelli
+
+Translated by W. K. Marriott
+
+Contents
+
+ INTRODUCTION
+ YOUTH Æt. 1-25—1469-94
+ OFFICE Æt. 25-43—1494-1512
+ LITERATURE AND DEATH Æt. 43-58—1512-27
+ THE MAN AND HIS WORKS
+ DEDICATION
+
+ THE PRINCE
+ CHAPTER I. HOW MANY KINDS OF PRINCIPALITIES THERE ARE, AND BY WHAT MEANS THEY ARE ACQUIRED
+ CHAPTER II. CONCERNING HEREDITARY PRINCIPALITIES
+ CHAPTER III. CONCERNING MIXED PRINCIPALITIES
+ CHAPTER IV. WHY THE KINGDOM OF DARIUS, CONQUERED BY ALEXANDER, DID NOT REBEL AGAIN...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: techreport_0166.txt</h4>
+      <pre># Technical Analysis: Data Deduplication Algorithms
+
+Document ID: DOC-03166
+Date: 2026-06-12
+
+## Abstract
+The field of data deduplication algorithms has seen rapid advancement over the past decade. Recent developments in data deduplication algorithms have transformed how businesses operate at scale. This document provides a comprehensive overview of data deduplication algorithms in modern enterprise environments.
+
+## Introduction
+
+The evolution of data deduplication algorithms represents a funda...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.1646</span>
+    <span class="metric">Content: 0.2435</span>
+    <span class="metric">TF-IDF: 0.0256</span>
+    <span class="metric">Embedding: 0.0259</span>
+    <span class="metric">Filename: 0.4167</span>
+  </div>
+</div>
+
+<div class="example">
+  <strong>Pair ID:</strong> 3680 |
+  <span class="badge badge-Non-Duplicate">Non-Duplicate</span>
+  <strong> Label:</strong> 0
+  <div class="pair">
+    <div class="doc">
+      <h4>File A: enron_email_0050.txt</h4>
+      <pre>From: Alice Johnson <alice.johnson@company.com>
+To: Carol Davis <carol.davis@company.com>
+Subject: Re: Project Update - Q2 Review
+Date: Wed, 12 Jul 2023 18:40:00 +0000
+Message-ID: <00002050.18450@company.com>
+Department: Operations
+
+The quarterly review is scheduled for next week, and I will need your input by Friday.
+Could you please confirm receipt of this message and provide your feedback at your earliest convenience?
+Please see the attached documents for your review and approval.
+
+Best regar...</pre>
+    </div>
+    <div class="doc">
+      <h4>File B: bbc_world_0069.txt</h4>
+      <pre># Environmental Treaty Gains Support from Additional Member Nations
+
+The announcement comes amid growing interest from stakeholders across multiple sectors. Experts suggest that the implications could be far-reaching, with potential effects on both domestic and international markets.
+
+Further developments are expected in the coming weeks as additional details emerge. Observers will be watching closely to assess the broader impact of these events.
+
+According to sources familiar with the matter, d...</pre>
+    </div>
+  </div>
+  <div class="metrics">
+    <span class="metric">Overall: 0.2231</span>
+    <span class="metric">Content: 0.3744</span>
+    <span class="metric">TF-IDF: 0.0084</span>
+    <span class="metric">Embedding: 0.0096</span>
+    <span class="metric">Filename: 0.4737</span>
+  </div>
+</div>
+
+
+</body>
+</html>

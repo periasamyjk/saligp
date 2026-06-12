@@ -1,0 +1,16 @@
+{
+  "tree": "gt(div(or_(avg(embedding_similarity, avg(sub(sha256_match, content_similarity), filename_similarity)), mul(min(and_(tfidf_similarity, content_similarity), max(max(size_similarity, content_similarity), div(sha256_match, size_similarity))), tfidf_similarity)), avg(lt(sha256_match, sub(min(sha256_match, filename_similarity), sub(size_similarity, metadata_similarity))), div(filename_similarity, and_(max(and_(size_similarity, sha256_match), and_(overall_similarity, metadata_similarity)), size_similarity)))), min(div(gt(content_similarity, overall_similarity), max(embedding_similarity, content_similarity)), or_(size_similarity, avg(overall_similarity, gt(size_similarity, size_similarity)))))",
+  "features": [
+    "filename_similarity",
+    "content_similarity",
+    "metadata_similarity",
+    "size_similarity",
+    "tfidf_similarity",
+    "embedding_similarity",
+    "sha256_match",
+    "overall_similarity"
+  ],
+  "fitness": 1.0,
+  "threshold": 0.5,
+  "model_type": "DEAP Improved Genetic Programming Tree"
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALIGP Dataset Report</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #333; margin: 0; padding: 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+  h1 { color: #1a237e; border-bottom: 3px solid #1a237e; padding-bottom: 12px; }
+  h2 { color: #283593; margin-top: 40px; }
+  h3 { color: #3949ab; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+  .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+  .card .value { font-size: 2.2em; font-weight: bold; color: #1a237e; }
+  .card .label { color: #666; font-size: 0.95em; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  th { background: #1a237e; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+  td { padding: 10px 16px; border-bottom: 1px solid #eee; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f0f4ff; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+  .badge-easy { background: #e8f5e9; color: #2e7d32; }
+  .badge-medium { background: #fff3e0; color: #e65100; }
+  .badge-hard { background: #fce4ec; color: #c62828; }
+  .badge-nodup { background: #e3f2fd; color: #1565c0; }
+  .chart-row { display: flex; flex-wrap: wrap; gap: 20px; margin: 24px 0; }
+  .chart-box { flex: 1; min-width: 300px; background: white; border-radius: 8px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  img.chart { width: 100%; border-radius: 4px; }
+  .config-box { background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; padding: 16px; font-family: monospace; font-size: 0.85em; white-space: pre-wrap; overflow-x: auto; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; color: #888; font-size: 0.9em; text-align: center; }
+  .section { background: white; border-radius: 8px; padding: 24px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔬 SALIGP Dataset Report</h1>
+  <p><strong>Generated:</strong> 2026-06-12 01:36:53 UTC<br>
+  <strong>Random Seed:</strong> 42</p>
+
+  <h2>📊 Dataset Summary</h2>
+  <div class="summary-grid">
+    <div class="card"><div class="value">3500</div><div class="label">Total Files</div></div>
+    <div class="card"><div class="value">500</div><div class="label">Original Files</div></div>
+    <div class="card"><div class="value">3000</div><div class="label">Duplicate Files</div></div>
+    <div class="card"><div class="value">6000</div><div class="label">Total Pairs</div></div>
+    <div class="card"><div class="value">3000</div><div class="label">Duplicate Pairs</div></div>
+    <div class="card"><div class="value">3000</div><div class="label">Non-Duplicate Pairs</div></div>
+  </div>
+
+  <div class="section">
+  <h2>🏷️ Duplicate Categories</h2>
+  <table>
+    <tr><th>Category</th><th>Count</th><th>Similarity Range</th><th>Description</th></tr>
+    <tr><td><span class="badge badge-easy">Easy</span></td><td>1752</td><td>≥ 0.95</td><td>Near-exact duplicates (whitespace, headers)</td></tr>
+    <tr><td><span class="badge badge-medium">Medium</span></td><td>951</td><td>0.85 – 0.95</td><td>Synonym substitution, sentence reordering</td></tr>
+    <tr><td><span class="badge badge-hard">Hard</span></td><td>296</td><td>0.70 – 0.85</td><td>Heavy paraphrasing, paragraph reordering</td></tr>
+    <tr><td><span class="badge badge-nodup">Non-Duplicate</span></td><td>3000</td><td>&lt; 0.70</td><td>Unrelated documents</td></tr>
+  </table>
+  </div>
+
+  <div class="section">
+  <h2>📁 File Types</h2>
+  <table>
+    <tr><th>File Type</th><th>Count</th><th>Percentage</th></tr>
+    
+    <tr><td>txt</td><td>2716</td><td>77.6%</td></tr>
+    
+    <tr><td>email</td><td>784</td><td>22.4%</td></tr>
+    
+  </table>
+  </div>
+
+  <div class="section">
+  <h2>🌐 Sources</h2>
+  <table>
+    <tr><th>Source</th><th>Count</th><th>Percentage</th></tr>
+    
+    <tr><td>synthetic_tech</td><td>1330</td><td>38.0%</td></tr>
+    
+    <tr><td>enron</td><td>784</td><td>22.4%</td></tr>
+    
+    <tr><td>ag_news</td><td>665</td><td>19.0%</td></tr>
+    
+    <tr><td>bbc_news</td><td>532</td><td>15.2%</td></tr>
+    
+    <tr><td>gutenberg</td><td>189</td><td>5.4%</td></tr>
+    
+  </table>
+  </div>
+
+  <div class="section">
+  <h2>📈 Similarity Statistics</h2>
+  <table>
+    <tr><th>Metric</th><th>Mean</th><th>Std</th><th>Min</th><th>Max</th><th>Median</th></tr>
+    
+    <tr>
+      <td>Overall Similarity</td>
+      <td>0.596</td><td>0.352</td>
+      <td>0.1049</td><td>0.9966</td><td>0.6424</td>
+    </tr>
+    
+    <tr>
+      <td>Content Similarity</td>
+      <td>0.6941</td><td>0.3104</td>
+      <td>0.0811</td><td>1.0</td><td>0.917</td>
+    </tr>
+    
+    <tr>
+      <td>Tfidf Similarity</td>
+      <td>0.5079</td><td>0.4654</td>
+      <td>0.0023</td><td>1.0</td><td>0.6894</td>
+    </tr>
+    
+    <tr>
+      <td>Embedding Similarity</td>
+      <td>0.5154</td><td>0.4704</td>
+      <td>-0.0007</td><td>1.0</td><td>0.8173</td>
+    </tr>
+    
+    <tr>
+      <td>Filename Similarity</td>
+      <td>0.6737</td><td>0.1896</td>
+      <td>0.2903</td><td>0.9703</td><td>0.7308</td>
+    </tr>
+    
+    <tr>
+      <td>Metadata Similarity</td>
+      <td>0.5566</td><td>0.2436</td>
+      <td>0.1082</td><td>1.0</td><td>0.516</td>
+    </tr>
+    
+  </table>
+  </div>
+
+  <div class="section">
+  <h2>🔀 Train/Val/Test Split</h2>
+  <table>
+    <tr><th>Split</th><th>Total</th><th>Duplicate</th><th>Non-Duplicate</th><th>Ratio</th></tr>
+    
+    <tr>
+      <td><strong>Train</strong></td>
+      <td>4199</td>
+      <td>2100</td>
+      <td>2099</td>
+      <td>0.500</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Validation</strong></td>
+      <td>901</td>
+      <td>450</td>
+      <td>451</td>
+      <td>0.499</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Test</strong></td>
+      <td>900</td>
+      <td>450</td>
+      <td>450</td>
+      <td>0.500</td>
+    </tr>
+    
+  </table>
+  </div>
+
+  
+  <div class="section">
+  <h2>📊 Visualizations</h2>
+  <div class="chart-row">
+    
+    <div class="chart-box">
+      <h3>Similarity Distribution</h3>
+      <img class="chart" src="similarity_distribution.png" alt="Similarity Distribution">
+    </div>
+    
+    <div class="chart-box">
+      <h3>Difficulty Distribution</h3>
+      <img class="chart" src="difficulty_distribution.png" alt="Difficulty Distribution">
+    </div>
+    
+  </div>
+  </div>
+  
+
+  <div class="section">
+  <h2>⚙️ Generation Configuration</h2>
+  <div class="config-box">{
+  "random_seed": 42,
+  "target_original_files": 500,
+  "target_duplicate_files": 1500,
+  "target_duplicate_pairs": 3000,
+  "target_non_duplicate_pairs": 3000,
+  "mutation_rates": {
+    "synonym_replacement_rate": 0.15,
+    "sentence_reorder_rate": 0.3,
+    "paragraph_reorder_rate": 0.2,
+    "whitespace_injection_rate": 0.1,
+    "punctuation_change_rate": 0.1,
+    "typo_injection_rate": 0.05,
+    "header_footer_add_rate": 0.4,
+    "duplicate_line_rate": 0.05,
+    "minor_addition_rate": 0.2
+  },
+  "similarity_thresholds": {
+    "min_duplicate_similarity": 0.7,
+    "max_non_duplicate_similarity": 0.6
+  },
+  "difficulty_thresholds": {
+    "easy_min": 0.9382,
+    "medium_min": 0.9066,
+    "hard_min": 0.7279,
+    "note": "Rank-based: top-1000 Easy, next-1000 Medium, bottom-1000 Hard from 3000 dup pairs"
+  },
+  "difficulty_targets": {
+    "easy": 1000,
+    "medium": 1000,
+    "hard": 1000,
+    "non_duplicate": 3000
+  },
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "active_learning_seed_size": 500,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "tfidf_max_features": 5000,
+  "paths": {
+    "raw": "data/raw",
+    "normalized": "data/normalized",
+    "duplicates": "data/duplicates",
+    "metadata": "data/metadata",
+    "pairs": "data/pairs",
+    "reports": "data/reports",
+    "logs": "logs"
+  },
+  "sources": {
+    "gutenberg_book_ids": [
+      1342,
+      84,
+      11,
+      1661,
+      2701,
+      174,
+      1952,
+      76,
+      2600,
+      98,
+      345,
+      1400,
+      4300,
+      2542,
+      5200,
+      1232,
+      2591,
+      100,
+      1260,
+      74,
+      768,
+      1184,
+      46,
+      2814,
+      16,
+      161,
+      1080,
+      730,
+      244,
+      2554
+    ],
+    "use_ag_news": true,
+    "use_synthetic_docs": true,
+    "synthetic_doc_count": 200
+  },
+  "actual_results": {
+    "original_files": 500,
+    "duplicate_files": 3000,
+    "total_files": 3500,
+    "duplicate_pairs": 3000,
+    "non_duplicate_pairs": 3000,
+    "total_pairs": 6000,
+    "easy_pairs": 1000,
+    "medium_pairs": 1000,
+    "hard_pairs": 1000,
+    "train_pairs": 4199,
+    "val_pairs": 901,
+    "test_pairs": 900,
+    "active_learning_seed": 500,
+    "active_learning_pool": 5500,
+    "embedding_model_used": "SVD-TF-IDF-128d (sentence-transformers fallback)",
+    "validation_status": "PASS"
+  }
+}</div>
+  </div>
+
+  <div class="footer">
+    Generated by SALIGP Dataset Generator | SALIGP Research Framework | 2026-06-12 01:36:53 UTC
+  </div>
+</div>
+</body>
+</html>

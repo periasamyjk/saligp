@@ -1,0 +1,36 @@
+/* Custom App styles */
+.nav-button {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.nav-button:hover {
+  @apply translate-x-1;
+}
+
+.metric-card {
+  @apply bg-slate-800/50 backdrop-blur border border-slate-700 rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300;
+}
+
+.chart-container {
+  @apply bg-slate-800/50 backdrop-blur border border-slate-700 rounded-xl p-6;
+}
+
+.status-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.status-success {
+  @apply bg-green-500/20 text-green-400 border border-green-500/30;
+}
+
+.status-warning {
+  @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+}
+
+.status-error {
+  @apply bg-red-500/20 text-red-400 border border-red-500/30;
+}
+
+.status-info {
+  @apply bg-blue-500/20 text-blue-400 border border-blue-500/30;
+}

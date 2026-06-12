@@ -1,0 +1,5 @@
+difficulty,accuracy,precision,recall,f1,roc_auc,pr_auc,tp,fp,tn,fn,specificity,sensitivity
+Easy,1.0,1.0,1.0,1.0,,1.0,134.0,0.0,0.0,0.0,0.0,1.0
+Non-Duplicate,1.0,1.0,1.0,1.0,,0.0,0.0,0.0,450.0,0.0,1.0,0.0
+Medium,1.0,1.0,1.0,1.0,,1.0,172.0,0.0,0.0,0.0,0.0,1.0
+Hard,1.0,1.0,1.0,1.0,,1.0,144.0,0.0,0.0,0.0,0.0,1.0

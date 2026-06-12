@@ -1,0 +1,2 @@
+model,accuracy,precision,recall,f1,roc_auc,pr_auc
+SALIGP,1.0,1.0,1.0,1.0,0.49999753086419757,0.5
