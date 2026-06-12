@@ -335,8 +335,6 @@ The deployment must include or generate the model artifact referenced by `SALIGP
 
 ## Author
 
-Karthik V
+Dr. J K Periasamy
 
-## Status
 
-Active project. Last README refresh: June 12, 2026.
