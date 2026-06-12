@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AlertCircle, ChevronDown, FileSearch, Upload } from 'lucide-react';
+import { AlertCircle, ChevronDown, Download, FileSearch, FileText, Upload } from 'lucide-react';
 import FileUploadZone from '../components/FileUploadZone';
 import PredictionResultCard from '../components/PredictionResultCard';
 import { usePredictions } from '../hooks/usePredictions';
@@ -67,6 +67,26 @@ const Predictions = () => {
             Process New File
             <ChevronDown size={16} className={`transition-transform ${showUpload ? 'rotate-180' : ''}`} />
           </button>
+          {predictions.length > 0 && (
+            <>
+              <button
+                type="button"
+                onClick={() => generateReport(predictions)}
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+              >
+                <FileText size={20} />
+                Generate Report
+              </button>
+              <button
+                type="button"
+                onClick={() => exportToCSV(predictions)}
+                className="flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors"
+              >
+                <Download size={20} />
+                Export CSV
+              </button>
+            </>
+          )}
           {predictions.length > 0 && (
             <button
               type="button"
@@ -148,22 +168,6 @@ const Predictions = () => {
             )}
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <button
-              type="button"
-              onClick={() => exportToCSV(predictions)}
-              className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors"
-            >
-              Export to CSV
-            </button>
-            <button
-              type="button"
-              onClick={() => generateReport(predictions)}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-            >
-              Generate Report
-            </button>
-          </div>
         </>
       )}
     </div>
